@@ -36,4 +36,23 @@ phone.addEventListener('input',function(){
     }
 });
 
+//UC 4 & UC5 PASSWORD
+const password = document.querySelector("#pwd");
+const errPass = document.querySelector(".pwd-error");
+password.addEventListener('input',function(){
+    let passRegex = RegExp("^((?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*`~_+]).{8,20})$");
+    if(passRegex.test(password.value)){
+        errPass.textContent="";
+    }else{
+        errPass.textContent="Password is incorrect";
+    }
+});
+
+const salary = document.querySelector('#salary');
+const output = document.querySelector('.salary-output');
+output.textContent = salary.value;
+salary.addEventListener('input', function(){
+    output.textContent = salary.value;
+});
+
 
